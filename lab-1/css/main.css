@@ -1,0 +1,76 @@
+html {
+  font-size: 16px; /* bazowy rozmiar czcionki */
+  font-family: system-ui, sans-serif; /* font systemowy */
+  line-height: 1.5; /* lepsza czytelność */
+}
+body {
+  margin: 1rem;
+  padding: 0;
+}
+nav{
+    justify-content: center;
+    text-align: center;
+}
+
+.main-heading{
+    text-align: center;
+}
+
+a {
+  color: #0066cc; /* niebieski kolor linków */
+  text-decoration: none; /* bez podkreślenia */
+  font-size: 1.4rem;
+}
+a:hover {
+  text-decoration: underline; /* podkreślenie przy najechaniu */
+}
+
+.menu-item{
+    padding: 3px;
+}
+
+.menu-item:hover{
+    text-decoration: none;
+    color: #0066cc79;
+}
+
+/* login */
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.login-body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background-color: #eeeeee;
+    padding: 30px 50px 50px 50px;
+    border-radius: 8px;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.login-body form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-button{
+    border: 0;
+    background-color: #0066cc;
+    color: white;
+    transition: 500ms;
+    padding: 5px 0px 5px 0px;
+    border-radius: 8px;
+}
+
+.login-button:hover{
+    transition: 500ms;
+    background-color: #0066cc79;
+    color: black;
+}
