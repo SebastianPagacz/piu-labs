@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/konkurs.css">
+    <title>Konkurs</title>
+</head>
+<body>
+    <main>
+                  <h1>Zgłoszenie do Konkursu Plastycznego</h1>
+        <input type="checkbox" id="motyw" class="motyw" hidden>
+        <label class="change-color" title="Zmień motyw" for="motyw">🌗</label>  
+        <div class="form-body">
+            <form action="https://httpbin.org/post" method="POST">
+                <div>
+                    <label for="imie">Imię:</label>
+                    <input type="text" name="imie" id="imie" class="form-input" required maxlength="30" autocomplete="given-name">
+                </div>
+                
+                <div>
+                    <label for="nazwisko">Nazwisko:</label>
+                    <input type="text" name="nazwisko" id="nazwisko" class="form-input" required maxlength="50" autocomplete="family-name">
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="form-input" required autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="miasto">Miasto:</label>
+                    <input type="text" name="miasto" id="miasto" list="lista-miast" placeholder="Wpisz lub wybierz" required class="form-input" autocomplete="address-level2">
+                </div>
+
+                <div>
+                    <label for="data-urodzenia">Data urodzenia:</label>
+                    <input type="date" id="data-urodzenia" name="data-urodzenia" required class="form-input" autocomplete="bday">
+                </div>
+
+                <div>
+                    <label for="liczba-prac">Liczba zgłaszanych prac (od 1 do 6):</label>
+                    <input type="number" id="liczba-prac" name="liczba-prac" required min="1" max="6" class="form-input">
+                </div>
+
+                <div>
+                    <label for="kolor">Kolor wiodący prac:</label>
+                    <input type="color" id="kolor" name="kolor" required class="form-input" value="#ffff00">
+                </div>
+
+                <div>
+                <label for="kategoria">Kategoria pracy:</label>
+                    <select id="kategoria" class="form-input">
+                        <option value="" disabled selected>--- Wybierz kategorię ---</option>
+
+                        <option value="rysunek">Rysunek</option>
+                        <option value="malarstwo">Malarstwo</option>
+                        <option value="grafika-komputerowa">Grafika cyfrowa</option>
+                    </select>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend>Publikacja pracy online:</legend>
+                        <div>
+                            <input type="radio" id="tak" name="publikacja" value="tak">
+                            <label for="tak">Tak</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="nie" name="publikacja" value="nie">
+                            <label for="nie">Nie</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" id="regulamin" name="regulamin" required>
+                    <label for="regulamin">Zgadzam się na regulamin konkursu</label>
+                </div>
+                
+                <button type="submit" class="submit-button">Wyślij zgłoszenie</button>
+            </form>
+        </div>
+        
+        <datalist id="lista-miast">
+            <option value="Kraków"></option>
+            <option value="Warszawa"></option>
+            <option value="Poznań"></option>
+            <option value="Wrocław"></option>
+            <option value="Mogilany"></option>
+            <option value="Gdańsk"></option>
+        </datalist>
+    </main>
+</body>
+</html>

@@ -2,6 +2,7 @@ html {
   font-size: 16px; /* bazowy rozmiar czcionki */
   font-family: system-ui, sans-serif; /* font systemowy */
   line-height: 1.5; /* lepsza czytelność */
+  background-color: #eeeeee;
 }
 body {
   margin: 1rem;
@@ -16,7 +17,7 @@ nav{
     text-align: center;
 }
 
-a {
+a{
   color: #0066cc; /* niebieski kolor linków */
   text-decoration: none; /* bez podkreślenia */
   font-size: 1.4rem;
@@ -35,23 +36,30 @@ a:hover {
 }
 
 /* login */
-
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 main{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .login-body{
     display: flex;
     flex-direction: column;
     text-align: center;
+    background-color: #fff;
     gap: 10px;
-    background-color: #eeeeee;
     padding: 30px 50px 50px 50px;
     border-radius: 8px;
     -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    width: 200px;
 }
 
 .login-body form{
@@ -60,17 +68,30 @@ main{
     gap: 10px;
 }
 
-.login-button{
+button{
     border: 0;
     background-color: #0066cc;
     color: white;
     transition: 500ms;
     padding: 5px 0px 5px 0px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
-.login-button:hover{
+button:hover{
     transition: 500ms;
     background-color: #0066cc79;
     color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+.minus:before{
+    content: "❌";
+}
+
+.plus:before{
+    content: "✔";
 }
