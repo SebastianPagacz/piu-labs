@@ -1,16 +1,32 @@
 /* Minimalny reset  */
 html {
   font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
+  font-family: Montserrat; /* font systemowy */
   line-height: 1.5; /* lepsza czytelność */
 }
 body {
-  margin: 1rem;
-  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+nav{
+  padding-bottom: 20px;
+  background-color: #0077B6;
+  text-align: center;
+  align-items: center;
+}
+
+nav > h1{
+  margin: 0;
+  padding-top: 10px;
+}
+nav > a{
+  padding: 10px;
 }
 
 a {
-  color: #0066cc; /* niebieski kolor linków */
+  color: #212529; /* niebieski kolor linków */
   text-decoration: none; /* bez podkreślenia */
   font-size: 1.4rem;
 }
