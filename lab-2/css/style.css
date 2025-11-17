@@ -1,14 +1,12 @@
 /* Minimalny reset  */
 html {
   font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: Montserrat; /* font systemowy */
+  font-family: Montserrat;
   line-height: 1.5; /* lepsza czytelność */
 }
 body {
   margin: 0;
-  text-align: center;
 }
-
 
 nav{
   padding-bottom: 20px;
@@ -25,6 +23,12 @@ nav > a{
   padding: 10px;
 }
 
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 a {
   color: #212529; /* niebieski kolor linków */
   text-decoration: none; /* bez podkreślenia */
@@ -32,4 +36,21 @@ a {
 }
 a:hover {
   text-decoration: underline; /* podkreślenie przy najechaniu */
+}
+
+button{
+  border-radius: 8px;
+  border: 0;
+  padding: 5px 10px 5px 10px;
+  background-color: #2598d6;
+  transition: 500ms;
+}
+
+button:hover{
+  background-color: #0077B6;
+  transition: 500ms;
+}
+
+button a:hover{
+    text-decoration: none;
 }
