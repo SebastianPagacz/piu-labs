@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/kanban.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Kanban board</title>
+</head>
+<body>
+    <header>
+        <h1>Kanban board</h1>
+    </header>
+    <main>
+
+        <div class="pop-up hidden" id="pop-up">
+            <div class="pop-up-content" id="pop-up-content">
+                <h3>Edit single card</h3>
+                <input type="text" id="edit-task" placeholder="new content">
+                <label>Pick new color</label>
+                <input type="color" id="edit-color">
+                <button id="save-changes-btn" class="save-changes-btn">save</button>
+                <button id="cancel-changes-btn" class="cancel-changes-btn">❌</button>
+            </div>
+        </div>
+
+        <div class="color-pop-up hidden" id="color-pop-up">
+            <div class="pop-up-content" id="color-pop-up-content">
+                <h3>Edit color of all cards in the board</h3>
+                <label>Pick new color</label>
+                <input type="color" id="edit-color-all">
+                <button id="save-changes-color-btn" class="save-changes-btn">save</button>
+                <button id="cancel-changes-color-btn" class="cancel-changes-btn">❌</button>
+            </div>
+        </div>
+
+        <div class="board-label" id="to-do-label">
+            <span class="sort" id="to-do-sort">sort</span>
+            <span class="color-all" id="to-do-color">🎨</span>
+            <h2>TO DO</h2>
+            <button id="add-to-do">add</button>
+        </div>
+        <div class="board" id="to-do-board">
+        </div>
+        <div class="board-label" id="in-progress-label">
+            <span class="sort" id="in-progress-sort">sort</span>
+            <span class="color-all" id="in-progress-color">🎨</span>
+            <h2>IN PROGRESS</h2>
+            <button id="add-in-progress">add</button>
+        </div>
+        <div class="board" id="in-progress-board">
+        </div>
+        <div class="board-label" id="done-label">
+            <span class="sort" id="done-sort">sort</span>
+            <span class="color-all" id="done-color">🎨</span>
+            <h2>DONE</h2>
+            <button id="add-done">add</button>
+        </div>
+        <div class="board" id="done-board">
+
+        </div>
+    </main>
+    <footer>
+        <a href="https://github.com/sebastianpagacz" target="_blank">Sebastian Pagacz &copy;</a>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
